@@ -56,11 +56,3 @@ else {
         Write-Error "Failed to backup and update the profile. Error: $_"
     }
 }
-
-# OMP Install
-try {
-    winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPosh
-}
-catch {
-    Write-Error "Failed to install Oh My Posh. Error: $_"
-}
