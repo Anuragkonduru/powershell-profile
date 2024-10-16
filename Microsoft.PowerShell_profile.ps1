@@ -183,6 +183,12 @@ function prompt {
     "$lastTwo> "
 }
 
+Set-PSReadLineOption -Colors @{
+    Command = 'Yellow'
+    Parameter = 'Green'
+    String = 'DarkCyan'
+}
+
 $PSROptions = @{
     ContinuationPrompt = '  '
     Colors             = @{
