@@ -185,6 +185,7 @@ function prompt {
 
 $PSROptions = @{
     ContinuationPrompt = '  '
+    Colors             = @{
     Parameter          = $PSStyle.Foreground.Magenta
     Selection          = $PSStyle.Background.Black
     InLinePrediction   = $PSStyle.Foreground.BrightYellow + $PSStyle.Background.BrightBlack
