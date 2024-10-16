@@ -176,10 +176,15 @@ function cpy { Set-Clipboard $args[0] }
 function pst { Get-Clipboard }
 
 # Enhanced PowerShell Experience
+function prompt {
+    $path = (Get-Location).Path
+    $splitPath = $path -split '\\'
+    $lastTwo = $splitPath[-2..-1] -join '\'
+    "$lastTwo> "
+}
 
 $PSROptions = @{
     ContinuationPrompt = '  '
-    Colors             = @{
     Parameter          = $PSStyle.Foreground.Magenta
     Selection          = $PSStyle.Background.Black
     InLinePrediction   = $PSStyle.Foreground.BrightYellow + $PSStyle.Background.BrightBlack
